@@ -98,6 +98,7 @@ drawHVPoints(dataHV);
 const resultOne = countMoreThanOneValues();
 
 let t1 = performance.now() - t0;
+t0 = performance.now();
 
 const dataD = data.filter((c) =>
   c.xOld !== c.xNew && c.yOld !== c.yNew ? true : false
@@ -105,7 +106,7 @@ const dataD = data.filter((c) =>
 drawDiagonals(dataD);
 const resultTwo = countMoreThanOneValues();
 
-let t2 = performance.now() - t1;
+let t2 = performance.now() - t0;
 
 console.log('=============================================');
 console.log('Part 1 result:', resultOne);
